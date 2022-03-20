@@ -45,36 +45,36 @@ response = ["Feed Me", "Mow", "Give Snacks"]
 async def Meow(ctx):
 	await ctx.send(random.choice(response))
 
-# Echop Command (UNUSED)
+# Will Repeat A Word
 @client.command()
-async def echone(ctx, arg): #arg stands for what the user says after words, for example "*echone hi"
+async def TippySay(ctx, arg):
 	await ctx.send(arg)
 
 #a command that picks a random word out of the words you tell it
 @client.command()
-async def pick(ctx, *arg):
+async def TippyDecide(ctx, *arg):
 	await ctx.send("I choose: " + random.choice(arg)) #as you can see I have so that it will start with "I choose " then it will pick one of the words you said at random and add that to it
 
 #a command where the bot will say "your name is bland and you are blank years old."
 @client.command()
-async def identity(ctx, arg1, arg2):
-	await ctx.send("Your name is " + arg1 + " and you are " + arg2 + " years old.")
+async def TyeInsult(ctx, arg1, arg2):
+	await ctx.send("Tye is " + arg1 + " and smells like " + arg2 + " LMAO.")
 
-#simpelest embed
+#sPlugs His Youtube
 @client.command()
-async def embedone(ctx):
-	easy_embed=discord.Embed(title="This is an embed", url="https://learn-to-program-a-bot-web.cuber1515.repl.co/", description="This is a discription", color=0x051878)
+async def TippyOfficial(ctx):
+	easy_embed=discord.Embed(title="Subscribe To Tippy", url="https://www.youtube.com/channel/UCy3N-C4EIxIzYeilWWYbf7A", description="Subscribe", color=0x051878)
 	await ctx.send(embed=easy_embed)
 
 
-#embed with an author
+#embed with an author (unused)
 @client.command()
 async def embedtwo(ctx):
 	author_embed=discord.Embed(title="This is an embed", url="https://learn-to-program-a-bot-web.cuber1515.repl.co/", description="This is a discription", color=0x051878)
 	author_embed.set_author(name="Author's name", url="https://learn-to-program-a-bot-web.cuber1515.repl.co/", icon_url="https://cdn.discordapp.com/attachments/833008810029088829/838230626628534272/compass_of_east.jpeg") # if you want to make the name be the name of who ever used the command then just put "ctx.author.display_name"(without the quotes around it) and for the picture to be the users pfp just put "ctx.author.avatar_url" (without the quotes around it)# if you want to make the name be the name of who ever used the command then just put "ctx.author.display_name"(without the quotes around it) and for the picture to be the users pfp just put "ctx.author.avatar_url" (without the quotes around it)
 	await ctx.send(embed=author_embed)
 
-#embed with a footer
+#embed with a footer (unused)
 @client.command()
 async def embedthree(ctx):
 	footer_embed=discord.Embed(title="This is an embed", url="https://learn-to-program-a-bot-web.cuber1515.repl.co/", description="This is a discription", color=0x051878)
@@ -82,7 +82,7 @@ async def embedthree(ctx):
 	footer_embed.set_footer(text="footer") # and you can add a "icon_url" just like in the author
 	await ctx.send(embed=footer_embed)
 
-#embed with thumbnail
+#embed with thumbnail (unused)
 @client.command()
 async def embedfour(ctx):
 	thumbnail_embed=discord.Embed(title="This is an embed", url="https://learn-to-program-a-bot-web.cuber1515.repl.co/", description="This is a discription", color=0x051878)
@@ -102,11 +102,10 @@ async def embedfive(ctx):
 	extrafield_embed.add_field(name="Field Number 3", value="This is inline and shares a space with the next field", inline=True)
 	await ctx.send(embed=extrafield_embed)
 
-# line break command
-
+#Uhhhh
 @client.command()
-async def lbreak(ctx):
-	await ctx.send("hello \nthere")
+async def Cat(ctx):
+	await ctx.send("Meow \nMow")
 	
 
 
